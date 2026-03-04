@@ -74,6 +74,8 @@
 (global-undo-tree-mode 1)
 (electric-pair-mode 1)
 
+(set-mouse-color "white")
+
 (setq global-display-line-numbers 'relative
       inhibit-startup-message 1
       backup-by-copying t      ; don't clobber symlinks
