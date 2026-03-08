@@ -1,7 +1,6 @@
 (set-foreground-color "#FFFFFF")
 (set-background-color "#080810")
 
-
 ;; (unless (file-exists-p "~/.emacs")
 ;;   (create-empty-file "~/.emacs"))
 (setq default-frame-alist '((font . "iosevka 12")
@@ -60,7 +59,7 @@
 	emms-volume-change-function 'emms-volume-mpd-change)
   (emms-player-mpd-connect)
   (emms-player-mpd-update-all))
-  ;; (add-hook 'emms-playlist-cleared-hook 'emms-player-mpd-clear))
+;; (add-hook 'emms-playlist-cleared-hook 'emms-player-mpd-clear))
 
 ;; (set-face-attribute 'default nil :family "iosevka")
 (menu-bar-mode 0)
