@@ -8,3 +8,7 @@
 /projects
 /tramp
 /url/
+*.~undo-tree~
+/multisession/
+/transient/
+/network-security.data

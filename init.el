@@ -1,8 +1,6 @@
 (set-foreground-color "#FFFFFF")
 (set-background-color "#080810")
 
-;; (unless (file-exists-p "~/.emacs")
-;;   (create-empty-file "~/.emacs"))
 (setq default-frame-alist '((font . "iosevka 12")
                             (background-color . "#080810")
                             (foreground-color . "#FFFFFF")
@@ -41,7 +39,7 @@
 (use-package yaml-mode)
 (use-package caddyfile-mode)
 (use-package scad-mode)
-(use-package diff-hl-mode)
+;; (use-package diff-hl-mode)
 (use-package emms
   :config
   (require 'emms-setup)
@@ -86,9 +84,10 @@
       version-control t
       lpr-command "lp"
       lpr-add-switches nil
-      mpc-browser-tags `(Playlist))
-(setf kill-buffer-delete-auto-save-files t)
-(setq create-lockfiles nil)
+      mpc-browser-tags `(Playlist)
+      kill-buffer-delete-auto-save-files t
+      create-lockfiles nil
+      user-mail-address "stabasov@gmail.com")
 
 ;; (defun select-mpd-file ()
 ;;    (string-remove-prefix "/" (string-remove-prefix emms-player-mpd-music-directory (read-file-name "Please enter a file: " emms-player-mpd-music-directory))))
@@ -102,7 +101,7 @@
 ;;   ;; (emms-player-mpd-send
 ;; ;;  (concat "insert " (read-file-name "Please enter a file: " emms-player-mpd-music-directory))))
 ;; (message )
-  
+
 ;; (global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
 (keymap-global-set "C-." 'mc/mark-next-like-this)
 (keymap-global-set "C-," 'mc/mark-previous-like-this)
@@ -198,9 +197,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(caddyfile-mode diff-hl diff-hl-mode ivy key-chord magit
+   '(caddyfile-mode ivy key-chord magit
 		    multiple-cursors nix-mode org-bullets
-		    pretty-symbols scad-mode undo-tree yaml-mode)))
+		    pretty-symbols scad-mode undo-tree yaml-mode))
+ '(smtpmail-smtp-server "smtp.gmail.com")
+ '(smtpmail-smtp-service 25))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
