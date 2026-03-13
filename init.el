@@ -38,7 +38,9 @@
 (use-package nix-mode)
 (use-package yaml-mode)
 (use-package caddyfile-mode)
+(use-package markdown-mode)
 (use-package scad-mode)
+;; (use-package evil)
 ;; (use-package diff-hl-mode)
 (use-package emms
   :config
@@ -57,6 +59,8 @@
 	emms-volume-change-function 'emms-volume-mpd-change)
   (emms-player-mpd-connect)
   (emms-player-mpd-update-all))
+
+(require 'iso-transl)
 ;; (add-hook 'emms-playlist-cleared-hook 'emms-player-mpd-clear))
 
 ;; (set-face-attribute 'default nil :family "iosevka")
@@ -87,7 +91,8 @@
       mpc-browser-tags `(Playlist)
       kill-buffer-delete-auto-save-files t
       create-lockfiles nil
-      user-mail-address "stabasov@gmail.com")
+      user-mail-address "stabasov@gmail.com"
+      doc-view-resolution 100)
 
 ;; (defun select-mpd-file ()
 ;;    (string-remove-prefix "/" (string-remove-prefix emms-player-mpd-music-directory (read-file-name "Please enter a file: " emms-player-mpd-music-directory))))
@@ -197,11 +202,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(caddyfile-mode ivy key-chord magit
+   '(caddyfile-mode evil ivy key-chord magit markdown-mode
 		    multiple-cursors nix-mode org-bullets
 		    pretty-symbols scad-mode undo-tree yaml-mode))
  '(smtpmail-smtp-server "smtp.gmail.com")
  '(smtpmail-smtp-service 25))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
