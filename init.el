@@ -49,8 +49,8 @@
   (require 'emms-volume)
   (emms-all)
   (emms-default-players)
-  ;; (add-to-list 'emms-player-list 'emms-player-mpd)
-  (setq emms-player-list `(emms-player-mpd))
+  (add-to-list 'emms-player-list 'emms-player-mpd)
+  ;; (setq emms-player-list `(emms-player-mpd))
   (add-to-list 'emms-info-functions 'emms-info-mpd)
   (setq emms-player-mpd-server-name "/home/sasha/.mpd/socket"
         emms-player-mpd-music-directory "/home/sasha/Music"
